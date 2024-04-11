@@ -1,0 +1,30 @@
+<div class="max-w-lg rounded bg-white overflow-hidden shadow-lg">
+  <div id="total-amount" class="px-6 py-4">
+    <div class="font-bold text-xl mb-3">Tip Calculator using Go / HTMX and the <br> 🎒🚀 LeapKit Template</div>
+    <p class="text-gray-600 text-base mb-3">
+      Calculate tips effortlessly! Enter the total amount and tip percentage to instantly compute the tip and total bill.
+    </p>
+
+    <form class="w-50" hx-get="/calculate-billing-amount" hx-target="#total-amount" hx-swap="beforeend" method="GET">
+      <div class="flex justify-between items-end">
+        <div class="flex flex-col w-full">
+          <label for="Amount" class="text-base font-semibold leading-7 text-gray-900">Total Amount</label>
+          <input required id="Amount" type="text" placeholder="$350" name="Amount" class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+        </div>
+      
+        <div class="flex flex-col w-full mx-2">
+          <label for="TipPercentage" class="text-base font-semibold leading-7 text-gray-900">Tip percentage</label>
+          <input required id="TipPercentage" type="text" placeholder="18%" name="TipPercentage" class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+        </div>
+  
+        <button type="submit" class="py-1.5 px-6 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">Calculate</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="px-6 pt-4 pb-2">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#go</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#htmx</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#leapkit</span>
+  </div>
+</div>
